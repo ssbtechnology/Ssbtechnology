@@ -1,271 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SSB Technology</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>SSB Technology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #001f3f, #0a0a0a);
-            color: white;
-            scroll-behavior: smooth;
-        }
-
-        header {
-            background: #0b1c2d;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 3px solid gold;
-        }
-
-        header h1 {
-            color: gold;
-            margin: 0;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        header p {
-            margin: 5px 0 0 0;
-        }
-
-        .logo{
-            width:120px;
-            max-width:40%;
-            margin-bottom:10px;
-            animation:fadeIn 1.5s ease-in-out;
-        }
-
-        section {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .box {
-            background: linear-gradient(135deg, silver, #0033cc);
-            padding: 20px;
-            margin: 15px;
-            border-radius: 10px;
-            border: 1px solid silver;
-            opacity: 0;
-            transform: translateX(-50px);
-            animation: slideInLeft 1s forwards;
-        }
-
-        .box:nth-child(2) {
-            animation: slideInRight 1s forwards;
-            animation-delay: 0.3s;
-        }
-
-        .box:nth-child(3) {
-            animation: slideInLeft 1s forwards;
-            animation-delay: 0.6s;
-        }
-
-        .box:nth-child(4) {
-            animation: slideInRight 1s forwards;
-            animation-delay: 0.9s;
-        }
-
-        .btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 12px 25px;
-            background: gold;
-            color: black;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            background: silver;
-            transform: scale(1.1);
-        }
-
-        footer {
-            background: #000;
-            text-align: center;
-            padding: 15px;
-            color: silver;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes slideInLeft {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .chat-float{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
+<style>
+/* ----------------- Body ----------------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #001f3f, #0a0a0a);
     color: white;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 28px;
-    line-height: 55px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,.4);
-    z-index: 9999;
+    scroll-behavior: smooth;
 }
-        .btn {
+
+/* ----------------- Header + Logo + Hero ----------------- */
+header {
+    background: #0b1c2d;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid gold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo circular clipping mask */
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid gold;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Tabs nav */
+.top-nav {
+    flex: 1;
+    text-align: center;
+}
+
+.top-nav a {
+    color: gold;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.top-nav a.active {
+    color: silver;
+}
+
+.top-nav a:hover {
+    color: silver;
+}
+
+/* Home + Search */
+.home-search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-search button {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    background: gold;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.home-search button:hover {
+    background: silver;
+    transform: scale(1.1);
+}
+
+.home-search input {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid silver;
+    outline: none;
+}
+
+/* ----------------- Hero ----------------- */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    background: url('office.jpg') center/cover no-repeat;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+    color: #ddd;
+}
+
+/* ----------------- Boxes ----------------- */
+section {
+    padding: 30px;
+    text-align: center;
+}
+
+.box {
+    background: linear-gradient(135deg, silver, #0033cc);
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    border: 1px solid silver;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 1s forwards;
+}
+
+.box:nth-child(2) {
+    animation: slideInRight 1s forwards;
+    animation-delay: 0.3s;
+}
+
+.box:nth-child(3) {
+    animation: slideInLeft 1s forwards;
+    animation-delay: 0.6s;
+}
+
+.box:nth-child(4) {
+    animation: slideInRight 1s forwards;
+    animation-delay: 0.9s;
+}
+
+.btn {
     display: inline-block;
     margin: 10px;
-    padding: 12px 26px;
-    background: linear-gradient(135deg, gold, silver);
-    color: #000;
+    padding: 12px 25px;
+    background: gold;
+    color: black;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 25px;
     font-weight: bold;
-    font-size: 15px;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, silver, gold);
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(255,215,0,0.7);
-}
-        .search-container {
-    display: flex;
-    justify-content: center;
-    margin: 15px 0;
-}
-
-#searchInput {
-    padding: 10px 15px;
-    width: 200px;
-    border: 2px solid gold;
-    border-radius: 30px 0 0 30px;
-    outline: none;
-    font-size: 14px;
-}
-
-.search-btn {
-    padding: 10px 15px;
-    border: 2px solid gold;
-    border-left: none;
-    background: gold;
-    color: black;
-    border-radius: 0 30px 30px 0;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.search-btn:hover {
     background: silver;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
+/* ----------------- Footer ----------------- */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 15px;
+    color: silver;
+    animation: fadeIn 2s ease-in-out;
+}
 
+/* ----------------- Animations ----------------- */
+@keyframes slideInLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
 
-    </style>
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Smooth scroll for JS */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----------------- Responsive ----------------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .top-nav {
+        text-align: center;
+    }
+    .home-search {
+        justify-content: center;
+    }
+}
+</style>
 </head>
-
 <body>
 
 <header>
     <img src="logo.png" alt="SSB Technology Logo" class="logo">
-    <h1>SSB TECHNOLOGY</h1>
-    <p>Technology | Digital Services | Innovation</p>
-    <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Tafuta...">
-    <button class="search-btn" onclick="searchSite()">🔍</button>
-</div>
-
+    
+    <nav class="top-nav">
+        <a href="#about" class="nav-link">📌 About Us</a>
+        <a href="#services" class="nav-link">🛠 Services</a>
+        <a href="#quick-links" class="nav-link">🔗 Quick Links</a>
+        <a href="#contact" class="nav-link">📍 Contact</a>
+    </nav>
+    
+    <div class="home-search">
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">🏠 Home</button>
+        <input type="text" placeholder="Search...">
+    </div>
 </header>
 
-<section>
+<section class="hero">
+    <h2>Karibu SSB Technology</h2>
+    <p>Huduma za Teknolojia, Networking, CCTV, Computer Maintenance na Digital Solutions</p>
+</section>
 
-    <div class="box">
+<section>
+    <div class="box" id="about">
         <h2>📌 About Us</h2>
-        <p>
-            SSB Technology ni jukwaa la teknolojia linalotoa elimu ya teknolojia,
-            huduma za kidigitali na msaada wa kitaalamu.
-        </p>
+        <p>SSB Technology ni jukwaa la teknolojia linalotoa elimu ya tech, huduma za kidigitali na msaada wa kitaalamu.</p>
         <p><em>"Your Gateway to Smart Technology"</em></p>
     </div>
 
-    <div class="box">
+    <div class="box" id="services">
         <h2>🛠 Our Services</h2>
         <p>
-            ✔ CCTV Camera Installation<br>
-            ✔ Computer Maintenance<br>
-            ✔ Computer & Phone Software Issues<br>
-            ✔ Networking & LAN Installation<br>
-            ✔ Graphics Design<br>
-            ✔ Typing & Document Design<br>
-            ✔ WhatsApp Bots
+            1) CCTV Camera Installation<br>
+            2) Computer Maintenance<br>
+            3) Computer & Phones Software Issues<br>
+            4) Networking Issues & LAN Installation<br>
+            5) Graphics Design<br>
+            6) Typing Documents (Designing)<br>
+            7) WhatsApp Bots
         </p>
     </div>
 
-    <div class="box">
+    <div class="box" id="quick-links">
         <h2>🔗 Quick Links</h2>
-        <a class="btn" href="https://chat.whatsapp.com/JroHrgW693a9YJ7JVAmsih">Join Group</a>
-        <a class="btn" href="https://whatsapp.com/channel/0029VbBmygjCBtxG67qsJy3O">Join Channel</a>
-        <a class="btn" href="https://www.youtube.com/@ssbtechnology-0515">YouTube</a>
-        <a class="btn" href="https://www.tiktok.com/@ssbtechnology_tz">TikTok</a>
-        <a class="btn" href="https://www.instagram.com/ssbtechnology_tz">Instagram</a>
-        <a class="btn" href="https://www.facebook.com/ssbtechnology_tz">Facebook</a>
+        <a class="btn" href="https://wa.me/255786135814">WhatsApp</a>
+        <a class="btn" href="https://github.com/ssbtechnology">GitHub</a>
+        <a class="btn" href="https://chat.whatsapp.com/JroHrgW693a9YJ7JVAmsih">Join Channel</a>
     </div>
 
-    <div class="box">
+    <div class="box" id="contact">
         <h2>📍 Contact</h2>
-        <p>Email: <a href="mailto:ssbtechnology@yahoo.com" style="color:black;">ssbtechnology@yahoo.com</a></p>
-        <p>Phone: <a href="tel:+255786135814" style="color:black;">+255 786 135 814</a></p>
-        <div class="box">
-  
-
-    <a class="btn"
-       href="https://wa.me/255786135814?text=Habari%20SSB%20Technology,%20nahitaji%20huduma%20yenu"
-       target="_blank">
-       🛠 Nahitaji Huduma
-    </a>
-
-    <a class="btn"
-       href="https://wa.me/255786135814?text=Habari%20SSB%20Technology,%20nahitaji%20kujiunga%20na%20mafunzo"
-       target="_blank">
-       🎓 Jiunge na Mafunzo
-    </a>
-</div>
-
-
+        <p>Email: <a href="mailto:ssbtechnology@yahoo.com">ssbtechnology@yahoo.com</a></p>
         <p>Location: Tanzania</p>
     </div>
-
 </section>
 
 <footer>
     <p>© 2026 SSB Technology | All Rights Reserved</p>
 </footer>
+
 <script>
-function searchSite() {
-    var query = document.getElementById("searchInput").value;
-    if(query.trim() !== "") {
-        // Inafungua Google search kwa jina la query
-        window.open("https://www.google.com/search?q=" + encodeURIComponent(query + " SSB Technology"), "_blank");
-    }
-}
+// ----------------- Active Tab Highlight -----------------
+const sections = document.querySelectorAll('.box');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+});
 </script>
 
 </body>
