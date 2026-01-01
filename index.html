@@ -102,163 +102,72 @@
         }
 
         @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        .box a {
-    color: dark blue;               
-    tex: deco;
-    ation: none:     ;
-n
-
-.eig t: bold 
-
-    ox a:: ver {
-;
-    lor: silver;
-  : text-deco;
-t
-
-    nderline
-
-}
-
-   
-
-/style
-
+    </style>
 </head>
 
-    y>
+<body>
 
- hea=er>
-    <i g s=c="logo.png" alt="SSB Techn=logy Lo
-    lassSSB TECHNOLOGYh1>SS
-    HNOTechnology | Digital Services | Innovationices
-| Innovat
+<header>
+    <img src="logo.png" alt="SSB Technology Logo" class="logo">
+    <h1>SSB TECHNOLOGY</h1>
+    <p>Technology | Digital Services | Innovation</p>
+</header>
 
-n</p>
-</h
-    >
+<section>
 
-< ectio=>
-    
-        s="b📌 About Us  <h2
-         Us
-            SSB Technology ni jukwaa la teknolojia linalotoa elimu ya tech,
+    <div class="box">
+        <h2>📌 About Us</h2>
+        <p>
+            SSB Technology ni jukwaa la teknolojia linalotoa elimu ya teknolojia,
             huduma za kidigitali na msaada wa kitaalamu.
-        taal
-            </p"Your Gateway to Smart Technology"Smart Tec
-    gy"</e
+        </p>
+        <p><em>"Your Gateway to Smart Technology"</em></p>
+    </div>
 
-    
-    </div=
+    <div class="box">
+        <h2>🛠 Our Services</h2>
+        <p>
+            ✔ CCTV Camera Installation<br>
+            ✔ Computer Maintenance<br>
+            ✔ Computer & Phone Software Issues<br>
+            ✔ Networking & LAN Installation<br>
+            ✔ Graphics Design<br>
+            ✔ Typing & Document Design<br>
+            ✔ WhatsApp Bots
+        </p>
+    </div>
 
-    
-        s="b🛠 Our Services2>🛠 
-        ces
-            1) CCTV Camera Installationmera
-            2) Computer Maintenancepute
-            3) Computer & Phones Software Issuess So
-            4) Networking Issues & LAN Installation LAN
-            5) Graphics Design) Gr
-            6) Typing Documents (Designing)ment
-            7) WhatsApp Bots
-        App 
-          
+    <div class="box">
+        <h2>🔗 Quick Links</h2>
+        <a class="btn" href="https://wa.me/255786135814">WhatsApp</a>
+        <a class="btn" href="https://chat.whatsapp.com/JroHrgW693a9YJ7JVAmsih">Join Group</a>
+        <a class="btn" href="https://whatsapp.com/channel/0029VbBmygjCBtxG67qsJy3O">Join Channel</a>
+        <a class="btn" href="https://www.youtube.com/@ssbtechnology">YouTube</a>
+        <a class="btn" href="https://www.tiktok.com/@ssbtechnology_tz">TikTok</a>
+        <a class="btn" href="https://www.instagram.com/ssbtechnology_tz">Instagram</a>
+        <a class="btn" href="https://www.facebook.com/ssbtechnology_tz">Facebook</a>
+    </div>
 
-    
-    </div=
+    <div class="box">
+        <h2>📍 Contact</h2>
+        <p>Email: <a href="mailto:ssbtechnology@yahoo.com" style="color:black;">ssbtechnology@yahoo.com</a></p>
+        <p>Phone: <a href="tel:+255786135814" style="color:black;">+255 786 135 814</a></p>
+        <p>Location: Tanzania</p>
+    </div>
 
-    
-        s="b🔗 Quick Linksh2>🔗
-        nk </h2>=        <a=class="btn" href="https://wa.WhatsApp6135
-     
-        a>      =        <a=class="btn" href="https://chat.whatsapp.com/JroHrgWJoin GroupAmsi
-        ro p</a>=        <a=class="btn" href="https://whatsapp.com/channel/0029VbBm gjCBtx=67qsJy3O"
-    Join Channel
-    
-oi  Chan=el
-</ >
-<a=class="btn" href="https://www.youtube.com/@ss techno=ogy-0515"
-    YouTube
-nk">
+</section>
 
-   YouTu=e
-</a 
-
-<a=class="btn" href="https://www.tiktok.com/@ sbtech=ology_tz"
-    TikTok
-ank"
-
-    TikT=k
-</a 
-
-<a=class="btn" href="https://www.instagram.com/ sbtech=ology_tz"
-    Instagram
-">
- 
-
- I stagr=m
-</a 
-
-<a=class="btn" href="https://www.facebook.com/ sbtech=ology_tz"
-    Facebook
-k">
-    Fa
-
-    
-</a </div=
-
-    
-    clas📍 Contact   <h
-    ConEmail: 2>     =p>Email: <a href="mailto:ssbtechnssbtechnology@yahoo.comhnology@
-    .coPhone: p>     =p>Phone: <a href="te+255 786 135 814>+255 78
-     81WhatsApp:     <p>=hatsApp: <a href="https://wa me/255=86135814"💬 Chat Nowlank">💬
-     NoLocation: Tanzaniaocat
-on: Ta
-
-        
-
-/div>
-
-   
-
-   
-
-</s
-    n>
-© 2026 SSB Technology | All Rights Reservedl Ri
-hts Reser
-ed</p>
-<
-foote >
-<sc = t>
-const.boxes = document.querySe;
-
-torAl ('.box') = con t observer = new Intersectio => e
-  r(entri.s => {
-  entr => f
-    h(entry .> {
-    if(entry
-      entry.target.classList.add('show');
-    }
-  });
-}, { threshold: 0.2 });
-
-boxes.forEach(box => observer.observe(box));
-</script>
+<footer>
+    <p>© 2026 SSB Technology | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
