@@ -145,15 +145,37 @@ footer {
     margin: 0;
 }
 
-.services-list li {
-    padding: 10px 0;
-    font-weight: bold;
-    color: black;
-    border-bottom: 1px solid rgba(0,0,0,0.3);
+.services-list li d: g: 1 p;
+       font-wei: t: b;
+       co: r: bl;
+       border-bot: m:  px so id r(b,(,,,,0,);
 }
 
 .services-list li:last-child {
     border-bottom: none;
+}
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.tab-btn {
+    padding: 10px 18px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.tab-btn:hover {
+    background: silver;
+    transform: translateY(-3px) scale(1.05);
 }
 
 </style>
@@ -205,16 +227,25 @@ footer {
 <section class="two-column">
 
     <div class="box" id="quick-links">
-        <h2>🔗 Quick Links</h2>
-        <div class="btn-container">
-            <a class="btn" href="https://www.tiktok.com/@ssbtechnology_tz">TikTok</a>
-            <a class="btn" href="https://www.instagram.com/ssbtechnology_tz">Instagram</a>
-            <a class="btn" href="https://www.facebook.com/ssbtechnology_tz">Facebook</a>
-            <a class="btn" href="https://www.youtube.com/@ssbtechnology-0515">YouTube</a>
-            <a class="btn" href="https://chat.whatsapp.com/JroHrgW693a9YJ7JVAmsih">👥 Join Group</a>
-            <a class="btn" href="https://whatsapp.com/channel/0029VbBmygjCBtxG67qsJy3O">📢 Join Channel</a>
-        </div>
+    <h2>🔗 Quick Links</h2>
+
+    <div class="tabs">
+        <a href="https://wa.me/255786135814" class="tab-btn">💬 WhatsApp</a>
+        <a href="https://chat.whatsapp.com/JroHrgW693a9YJ7JVAmsih" class="tab-btn">👥 Join Group</a>
+        <a href="https://whatsapp.com/channel/0029VbBmygjCBtxG67qsJy3O" class="tab-btn">📢 Channel</a>
+        <a href="https://www.youtube.com/@ssbtechnology" class="tab-btn">▶️ YouTube</a>
+        <a href="https://www.tiktok.com/@ssbtechnology_tz" class="tab-btn">🎵 TikTok</a>
+        <a href="https://www.instagram.com/ssbtechnology_tz" class="tab-btn">📸 Instagram</a>
+        <a href="https://www.facebook.com/ssbtechnology_tz" class="tab-btn">📘 Facebook</a>
     </div>
+</div>
+
+      
+        
+         
+   
+            
+    
 
     <div class="box" id="contact">
         <h2>📍 Contacts</h2>
@@ -238,7 +269,7 @@ footer {
     © 2025 SSB Technology | All Rights Reserved
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/255786135814">chart Now💬</a>
+<a class="whatsapp-float" href="https://wa.me/255786135814"><div>chart Now</div>💬</a>
 
 <script>
 const links = document.querySelectorAll('.top-nav a');
@@ -253,8 +284,7 @@ window.addEventListener('scroll', () => {
     }links forEach(arEac{(a => {
  a classListaremove('active')ctive');
  if (a getAttribute('href')'href'#'===current)u{rent) {
-     a classListaadd('active')ctive');
- }     })
+     a classListaadd('active')ctive');; }     })
  }) });
 });
 </sc</body><</html><
