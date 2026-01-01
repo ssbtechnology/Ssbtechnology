@@ -139,6 +139,23 @@ footer {
     border-radius: 50%;
     font-size: 22px;
 }
+    .services-list {
+    list-style: none;       /* inaondoa bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.services-list li {
+    padding: 10px 0;
+    font-weight: bold;
+    color: black;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.services-list li:last-child {
+    border-bottom: none;
+}
+
 </style>
 </head>
 
@@ -171,20 +188,20 @@ footer {
 </section>
 
 <!-- SERVICES -->
-<section class="box" id="services">
+<<div class="box" id="services">
     <h2>🛠 Our Services</h2>
-    <p>
-        ✔ CCTV Installation<br>
-        ✔ Computer Maintenance<br>
-        ✔ Software Issues<br>
-        ✔ Networking & LAN<br>
-        ✔ Graphics Design<br>
-        ✔ Typing & Designing<br>
-        ✔ WhatsApp Bots
-    </p>
-</section>
 
-<!-- QUICK LINKS + CONTACT -->
+    <ul class="services-list">
+        <li>📷 CCTV Camera Installation</li>
+        <li>💻 Computer Maintenance</li>
+        <li>🧠 Computer & Phone Software Issues</li>
+        <li>🌐 Networking Issues & LAN Installation</li>
+        <li>🎨 Graphics Design</li>
+        <li>📄 Typing Documents (Designing)</li>
+        <li>🤖 WhatsApp Bots</li>
+    </ul>
+</div>
+-- QUICK LINKS + CONTACT -->
 <section class="two-column">
 
     <div class="box" id="quick-links">
@@ -200,8 +217,8 @@ footer {
     </div>
 
     <div class="box" id="contact">
-        <h2>📍 Contact</h2>
-        <p>Email: <a href="mailto:ssbtechnology@yahoo.com">ssbtechnology@yahoo.com</a></p>
+        <h2>📍 Contacts</h2>
+        <p><a href="mailto:ssbtechnology@yahoo.com">ssbtechnology@yahoo.com</a></p>
         <p>Phone: <a href="tel:+255786135814">+255 786 135 814</a></p>
         <p>Location: Tanzania</p>
 
@@ -218,10 +235,10 @@ footer {
 </section>
 
 <footer>
-    © 2026 SSB Technology | All Rights Reserved
+    © 2025 SSB Technology | All Rights Reserved
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/255786135814">💬</a>
+<a class="whatsapp-float" href="https://wa.me/255786135814">chart Now💬</a>
 
 <script>
 const links = document.querySelectorAll('.top-nav a');
@@ -229,19 +246,15 @@ const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    sections.forEach(sec => {
-        if (pageYOffset >= sec.offsetTop - 80) {
-            current = sec.getAttribute('id');
-        }
-    });
-    links.forEach(a => {
-        a.classList.remove('active');
-        if (a.getAttribute('href') === '#' + current) {
-            a.classList.add('active');
-        }
-    });
+ = 'sectionseforEach(secach({ec => {
+ if (pageYOffsetYOffsec offsetTopfse80)p{- 80) {
+     currentcursectgetAttribute('id')e('id');
+ }     })
+    }links forEach(arEac{(a => {
+ a classListaremove('active')ctive');
+ if (a getAttribute('href')'href'#'===current)u{rent) {
+     a classListaadd('active')ctive');
+ }     })
+ }) });
 });
-</script>
-
-</body>
-</html>
+</sc</body><</html><
