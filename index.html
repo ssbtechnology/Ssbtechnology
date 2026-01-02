@@ -177,8 +177,35 @@ footer {
     background: silver;
     transform: translateY(-3px) scale(1.05);
 }
+/* Quick Links CSS */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px; /* space between buttons */
+    margin-top: 15px;
+}
+
+.tab-btn {
+    padding: 12px 20px;
+    border: 2px solid gold;
+    border-radius: 25px;
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.tab-btn:hover {
+    background: gold;
+    color: black;
+    transform: scale(1.05);
+}
+
+
 </style>
-</CSS>
+</head>
 
 <body>
 
@@ -226,18 +253,19 @@ footer {
 <!-- QUICK LINKS + CONTACT -->
 <section class="two-column">
 
-    <div class="box" id="quick-links">
-    <h2>🔗 Follow Us</h2>
-
+    <!-- Quick Links Section -->
+<section class="box" id="quick-links">
+    <h2>Follow Us<h2>
     <div class="tabs">
-        <a href="https://chat.whatsapp.com/JroHrgW693a9YJ7JVAmsih" class="tab-btn">👥 Join Group</a></b>
-        <a href="https://whatsapp.com/channel/0029VbBmygjCBtxG67qsJy3O" class="tab-btn">📢 Channel</a></b>
-        <a href="https://www.youtube.com/@ssbtechnology" class="tab-btn">▶️ YouTube</a></b>
-        <a href="https://www.tiktok.com/@ssbtechnology_tz" class="tab-btn">🎵 TikTok</a></b>
-        <a href="https://www.instagram.com/ssbtechnology_tz" class="tab-btn">📸 Instagram</a></b>
-        <a href="https://www.facebook.com/ssbtechnology_tz" class="tab-btn">📘 Facebook</a></b>
+        <a class="tab-btn" href="https://wa.me/255786135814" target="_blank">💬 WhatsApp</a>
+        <a class="tab-btn" href="https://chat.whatsapp.com/JroHrgW693a9YJ7JVAmsih" target="_blank">👥 Join Group</a>
+        <a class="tab-btn" href="https://www.youtube.com/@ssbtechnology" target="_blank">▶️ YouTube</a>
+        <a class="tab-btn" href="https://www.tiktok.com/@ssbtechnology_tz" target="_blank">🎵 TikTok</a>
+        <a class="tab-btn" href="https://www.instagram.com/ssbtechnology_tz" target="_blank">📸 Instagram</a>
+        <a class="tab-btn" href="https://www.facebook.com/ssbtechnology_tz" target="_blank">📘 Facebook</a>
     </div>
-</div>
+</section>
+
 
 
       
