@@ -260,7 +260,8 @@ footer {
         <h2>📍 Contacts</h2>
         <p>Email: <a href="mailto:ssbtechnology@yahoo.com">ssbtechnology@yahoo.com</a></p>
         <p>Phone: <a href="tel:+255786135814">+255 786 135 814</a></p>
-        <p>Location: Mwanza,Tanzania</p>
+      <a class="btn" href="https://ssbtechnology.github.io/Ssbtechnology/" target="_blank">Visit Our Website</a>
+      <p>Location: Mwanza,Tanzania</p>
 
         <div class="btn-container">
             <a class="btn" href="https://wa.me/255786135814?text=Habari%20SSB%20Technology,%20nahitaji%20huduma%20yenu">
@@ -281,19 +282,16 @@ footer {
 <a class="whatsapp-float" href="https://wa.me/255786135814">💬</a>
 
 <script>
-const links = document.querySelectorAll('.top-nav a');
-const sections = document.querySelectorAll('section');
+// Hii script inafanya .box kuwa animated wakati zinapoonekana kwenye screen
+const boxes = document.querySelectorAll('.box');
 
-window.addEventListener('scroll', () => {
-    let current = '';
- = 'sectionseforEach(secach({ec => {
- if (pageYOffsetYOffsec offsetTopfse80)p{- 80) {
-     currentcursectgetAttribute('id')e('id');
- }     })
-    }links forEach(arEac{(a => {
- a classListaremove('active')ctive');
- if (a getAttribute('href')'href'#'===current)u{rent) {
-     a classListaadd('active')ctive');; }     })
- }) });
-});
-</sc</body><</html><
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+boxes.forEach(box => observer.observe(box));
+</script>
